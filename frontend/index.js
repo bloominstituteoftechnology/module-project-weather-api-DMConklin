@@ -25,6 +25,12 @@ async function moduleProject4() {
     evt.target.setAttribute('disabled', null)
     weatherWidget.style.display = 'none'
     info.textContent = 'Fetching weather data...'
+    axios.get(`http://localhost:3003/api/weather?city=${evt.target.value}`)
+      .then()
+      .catch(err => {
+        console.log(err)
+      })
+      .finally()
   })
 
 
