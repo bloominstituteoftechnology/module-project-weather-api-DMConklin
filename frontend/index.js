@@ -18,9 +18,13 @@ async function moduleProject4() {
   const weatherWidget = document.querySelector('#weatherWidget')
   weatherWidget.style.display = 'none'
 
+  const info = document.querySelector('p.info')
+
   const citySelect = document.querySelector('#citySelect')
   citySelect.addEventListener('change', evt => {
-    console.log(evt.target.value)
+    evt.target.setAttribute('disabled', null)
+    weatherWidget.style.display = 'none'
+    info.textContent = 'Fetching weather data...'
   })
 
 
