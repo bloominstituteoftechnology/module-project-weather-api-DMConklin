@@ -17,6 +17,19 @@ async function moduleProject4() {
   // 👉 Tasks 1 - 5 go here
   const weatherWidget = document.querySelector('#weatherWidget')
   weatherWidget.style.display = 'none'
+
+  const citySelect = document.querySelector('#citySelect')
+  citySelect.addEventListener('change', evt => {
+    console.log(evt.target.value)
+  })
+
+
+
+  // Array.from(citySelect).forEach(option => {
+  //   option.addEventListener('change', evt => {
+  //     console.log(evt)
+  //   })
+  // })
   // 👆 WORK WORK ABOVE THIS LINE 👆
 
 }
